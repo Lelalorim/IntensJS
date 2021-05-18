@@ -20,13 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
         featureLinkElems[index].classList.remove('feature__link_active');
 
       } else {           
-        //переключение табов
-        // featureSubElems.forEach((featureSubElem) => {
-        // featureSubElem.classList.add('hidden');
-        // })
-        // featureLinkElems.forEach((featureLinkElem) => {
-        // featureLinkElem.classList.remove('feature__link_active');
-        // })
+        //переключение 
+        featureSubElems.forEach((featureSubElem) => {
+        featureSubElem.classList.add('hidden');
+        })
+        featureLinkElems.forEach((featureLinkElem) => {
+        featureLinkElem.classList.remove('feature__link_active');
+        })
         
         featureSubElems[index].classList.remove('hidden');
         btn.classList.add('feature__link_active');          
