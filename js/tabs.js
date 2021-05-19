@@ -1,5 +1,6 @@
 const tabsHandlerElems = document.querySelectorAll('[data-tabs-handler]');
 const tabsFieldElems = document.querySelectorAll('[data-tabs-field]');
+const tabsTitleElems = document.querySelectorAll('[data-tabs-title]');
 
 
 for (const tab of tabsHandlerElems) {
@@ -14,6 +15,14 @@ for (const tab of tabsHandlerElems) {
 
     tabsFieldElems.forEach(item => {
       if (item.dataset.tabsField === tab.dataset.tabsHandler) {
+        item.classList.remove('hidden')
+      } else {
+        item.classList.add('hidden')
+      }
+    })
+
+    tabsTitleElems.forEach(item => {
+      if (item.dataset.tabsTitle === tab.dataset.tabsHandler) {
         item.classList.remove('hidden')
       } else {
         item.classList.add('hidden')
