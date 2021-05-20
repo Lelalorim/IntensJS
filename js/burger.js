@@ -12,3 +12,12 @@ const closeMenu = () => {
   menuElem.classList.remove('menu-active');
   hamburgerElem.classList.remove('humburger-menu-active');
 }
+
+
+menuElem.addEventListener('click', (event) => {
+  const target = event.target;
+
+  if (target.classList.contains('menu-list__link')) {
+    closeMenu()
+  }
+});
