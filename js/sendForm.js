@@ -30,7 +30,12 @@ const formHandler = (form) => {
         value
       } of form.elements) {
       if (name) {
-        data[name] = value;
+        if (value !== '') {
+          data[name] = value;
+        } else {
+          alert('Заполните все поля');
+          return false;
+        }
       }
     }
 
@@ -49,9 +54,7 @@ const formHandler = (form) => {
         smallElem.style.color = 'red';
         form.append(smallElem);
       });
-
     form.reset();
-
   })
 };
 
